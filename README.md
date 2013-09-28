@@ -1,4 +1,4 @@
 GitIntro
 ========
 
-introduct github to new members of lab mu
+introduce github to new members of lab mu
