@@ -1,4 +1,3 @@
-GitIntro
+Intro
 ========
-
-introduce github to new members of lab mu
+Introduction to labmu!
