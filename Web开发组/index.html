@@ -1,0 +1,271 @@
+	<!doctype html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8" />
+	    <meta name="viewport" content="width=1024" />
+	    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <title>Lab μ Web组</title>
+	    
+	    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+	    <meta name="author" content="Bartek Szopka" />
+	    <link href="css/impress-demo.css" rel="stylesheet" />
+	    
+	    <link rel="shortcut icon" href="favicon.png" />
+	    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	  </head>
+	  <body class="impress-not-supported">
+	    <!--div class="background-image"></div-->
+	    <div class="logo-container">
+	      <img src="images/Lab mU Meow.svg">
+	      <div class="footnote">清华大学校园极客社</div>
+	    </div>
+	    <div class="fallback-message">
+	      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+	      <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+	    </div>
+	    <div id="impress">
+
+	      <style>
+	        .font-blue{
+	        color: blue;
+	        }
+	        q{
+	        text-align: center;
+	        }
+	        .its .big{
+	        display: block;
+	        font-size: 100px;
+	        line-height: 120px;
+	        margin-bottom: 20px;
+	        }
+	        #its{
+	        line-height: 90px;
+	        }
+	        body{
+	        font-family: Helvetica Neue,tahoma,arial,"Hiragino Sans GB",Microsoft YaHei,\5b8b\4f53;
+	        }
+	        body h1{
+	        font-weight: bold;
+	        }
+	      </style>
+	      <!--
+	          
+	          Here is where interesting thing start to happen.
+	          
+	          Each step of the presentation should be an element inside the `#impress` with a class name
+	          of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+	          the 'camera' shows them on each step of the presentation.
+	          
+	          Positioning information is passed through data attributes.
+	          
+	          In the example below we only specify x and y position of the step element with `data-x="-1000"`
+	          and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+	          will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+	          
+	          It will not be rotated or scaled.
+	          
+	        -->
+	      <!--div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+	          </div-->
+	      <div id="bored" class="step" data-x="-1000" data-y="-8000">
+	        <p style="text-align: center;font-size:90px"><b>Web1.0时代</b></p>
+	      </div>
+	      
+	      <div class="step" data-x="1000" data-y="-8000">
+	        <p style="text-align: center;font-size:70px"><b>静态</b>页面</br><b>被动</b>接受信息</p>
+	      </div>
+
+	      <div class="step" data-x="-1000" data-y="-4000">
+	        <p style="text-align: center;font-size:90px"><b>Web2.0时代</b></p>
+	      </div>
+	      
+	      <div class="step" data-x="1000" data-y="-4000">
+	        <p style="text-align: center;font-size:80px"><b>炫酷</b>的视觉效果</br><b>完美</b>的交互体验</p>
+	      </div>
+
+	      <!--
+	          
+	          This is an example of step element being scaled.
+	          
+	          Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+	          element will be 4 times larger than the others.
+	          From presentation and transitions point of view it means, that it will have to be scaled
+	          down (4 times) to make it back to its correct size.
+	          
+	        -->
+	      <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+	        <div style="text-align:center;">
+	          <h1 style="font-size:120px">加 入 我 们</h1>
+	          <h2>来创造无限可能</h2>
+	          <img src="images/Lab mU Meow.svg" style="width:25%;height:25%">
+	          <div class="footnote">labμ Web组</div>
+	        </div>
+	      </div>
+	      <!--div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+	          <span class="try">then you should try</span>
+	          <h1>impress.js<sup>*</sup></h1>
+	          <span class="footnote"><sup>*</sup> no rhyme intended</span>
+	    </div-->
+
+	      <!--
+	          
+	          This element introduces rotation.
+	          
+	          Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
+	          element should be rotated by 90 degrees clockwise.
+	          
+	        -->
+	      <div id="its" class="step its" data-x="0" data-y="4000" data-scale="4">
+	        <p style="font-size:80px">前端开发</p>
+	        <p style="text-align:center;font-size:70px"><b>HTML</br>
+	          CSS<br/>
+	          JavaScript</br>
+	        </p>
+	      </div>
+	      
+	      <div id="its_2" class="step its" data-x="4000" data-y="4000" data-z="-4000" data-scale="4" data-rotate-y="90">
+	        <p style="font-size:70px"><b>HTML</b></p>
+	        <p style="text-align:center;font-size:50px">超文本标记语言</p>
+	        <br><br>
+	        <p style="font-size:50px">HTML5 Demo</p>
+	        <p style="text-align:center;font-size:30px"><a href="http://ghost-hack.com/post/jsexperiments/tunneler/tunneler.html" target="_blank">Tunneler</a></p>
+	        <p style="text-align:center;font-size:30px"><a href="http://mrdoob.com/projects/chromeexperiments/ball-pool/" target="_blank">Ball Pool</a></p>
+	        <p style="text-align:center;font-size:30px"><a href="http://hakim.se/experiments/html5/blob/03/" target="_blank">Blob</a></p>
+	        <p style="text-align:center;font-size:30px"><a href="http://hakim.se/experiments/html5/core/01/" target="_blank">Core</a></p>
+	        <p style="text-align:center;font-size:30px"><a href="http://www.schillmania.com/projects/soundmanager2/demo/360-player/canvas-visualization.html" target="_blank">360° MP3 Player</a></p>
+	      </div>
+	      
+	      <div id="its_3" class="step its" data-x="0" data-y="4000" data-z="-8000" data-scale="4" data-rotate-y="180">
+	        <p style="font-size:70px"><b>CSS</b></p>
+	          <p style="text-align:center;font-size:50px">层叠样式表
+	          <br><br>
+	          <p style="font-size:50px">CSS3 Demo</p>
+	          <p style="text-align:center;font-size:30px"><a href="ZJH/index.html" target="_blank">BonusTime</a></p>
+	        </p>
+	        
+	      </div>
+	      
+	      <div id="its_4" class="step its" data-x="-4000" data-y="4000" data-z="-4000" data-scale="4" data-rotate-y="270">
+	        <p style="font-size:70px"><b>JavaScript</b></p>
+	          <p style="text-align:center;font-size:50px">前端脚本语言
+	        </p>
+	        
+	      </div>
+
+	      <div id="its2" class="step its" data-x="0" data-y="8000" data-scale="4">
+	        <p style="font-size: 70px;text-align:center"><b>前端开发可以做什么</b></p>
+	      </div>
+
+	      <div id="its3" class="step its" data-x="0" data-y="12000" data-scale="4">
+	          <p><b class="big">可以</b></p>
+	          <p style="font-size: 60px;text-align:center">开发好玩的东西<br/>
+	          做出<a href="http://lab.mu" target="_blank">炫酷的主页</a><br/></p>
+	      </div>
+
+
+	      <div id="intro1" class="step its" data-x="0" data-y="16000" data-scale="4">
+	        <p style="font-size: 70px;text-align:center"><b>如何学习前端姿势</b></p>
+	      </div>
+
+	      <div id="intro5" class="step its" data-x="0" data-y="20000" data-scale="4">
+	          <p><b class="big">Tips</b></p>
+	          <p style="font-size: 60px;text-align:center">一边翻开书一边打开IDE<br/>
+	          多练习 多上手 多google<br/></p>
+	      </div>
+	      <!--
+	          
+	          And now it gets really exciting! We move into third dimension!
+	          
+	          Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
+	          `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
+	          positioned far away from us (by 3000px).
+	          
+	        -->
+	      
+	<div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+	        <div style="text-align:center;">
+	          <h1 style="font-size:120px">加 入 我 们</h1>
+	          <h2>来创造无限可能</h2>
+	          <img src="images/Lab mU Meow.svg" style="width:25%;height:25%">
+	          <div class="footnote">labμ Web组</div>
+	        </div>
+	      </div>
+	    </div>
+
+	    <!--
+	        
+	        Hint is not related to impress.js in any way.
+	        
+	        But it can show you how to use impress.js features in creative way.
+	        
+	        When the presentation step is shown (selected) its element gets the class of "active" and the body element
+	        gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+	        so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+	        the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+	        
+	        This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+	        the first step of presentation is visible for a couple of seconds.
+	        
+	        ...
+	        
+	        And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+	        It's just a quick and dirty workaround to get different hint text for touch devices.
+	        In a real world it should be at least placed in separate JS file ... and the touch content should be
+	        probably just hidden somewhere in HTML - not hard-coded in the script.
+	        
+	        Just sayin' ;)
+	        
+	      -->
+	    <!--div class="hint">
+	      <p>Use a spacebar or arrow keys to navigate</p>
+	    </div-->
+	    <script>
+	      if ("ontouchstart" in document.documentElement) { 
+	      document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+	      }
+	    </script>
+
+	    <!--
+	        
+	        Last, but not least.
+	        
+	        To make all described above really work, you need to include impress.js in the page.
+	        I strongly encourage to minify it first.
+	        
+	        In here I just include full source of the script to make it more readable.
+	        
+	        You also need to call a `impress().init()` function to initialize impress.js presentation.
+	        And you should do it in the end of your document. Not only because it's a good practice, but also
+	        because it should be done when the whole document is ready.
+	        Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+	        
+	      -->
+	    <script src="js/impress.js"></script>
+	    <script>impress().init();</script>
+
+	    <!--
+	        
+	        The `impress()` function also gives you access to the API that controls the presentation.
+	        
+	        Just store the result of the call:
+	        
+	        var api = impress();
+	        
+	        and you will get three functions you can call:
+	        
+	        `api.init()` - initializes the presentation,
+	        `api.next()` - moves to next step of the presentation,
+	        `api.prev()` - moves to previous step of the presentation,
+	        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+	        id or the DOM element; second parameter can be used to define duration of the transition in ms,
+	        but it's optional - if not provided default transition duration for the presentation will be used.
+	        
+	        You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+	        Don't worry, it wont initialize the presentation again.
+	        
+	        For some example uses of this API check the last part of the source of impress.js where the API
+	        is used in event handlers.
+	        
+	      -->
+	  </body>
+	</html>
